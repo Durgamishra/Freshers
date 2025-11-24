@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Science+Gothic:wght@100..900&family=Staatliches&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Staatliches", sans-serif;
+}
+
+body{
+    background-color: #ccc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding-top: 120px;
+    padding-bottom: 80px;
+}
+
+/* HEADER FIX */
+.main-header{
+    width: 100%;
+    background: linear-gradient(90deg, #111, #333);
+    color: gold;
+    text-align: center;
+    padding: 18px 0;
+    font-size: 1.6rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border-bottom: 2px solid gold;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+
+/* CONTAINER */
+.container{
+    width: 100%;
+    max-width: 900px;
+    background: #fff;
+    box-shadow: 5px 10px 10px black;
+    padding: 10px;
+}
+
+/* TABLE WRAPPER – for mobile scrolling */
+.table-responsive{
+    width: 100%;
+    overflow-x: auto;
+}
+
+/* TABLE */
+.tbl{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tbl thead{
+    background: black;
+    color: white;
+}
+
+.tbl thead tr th{
+    padding: 0.7rem;
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+    border: 2px solid #aab7b8;
+}
+
+.tbl tbody tr td{
+    padding: 0.6rem;
+    font-size: 0.9rem;
+    letter-spacing: 0.1rem;
+    text-align: center;
+    border: 2px solid #aab7b8;
+}
+
+/* Hover */
+.tbl tr:hover td{
+    background: #b6bfc0;
+    transition: 0.3s;
+}
+
+#collected:hover td{
+    background: green !important;
+    color: white !important;
+}
+
+/* FOOTER */
+footer{
+    text-align: center;
+    padding: 12px 0;
+    background: #222;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* ---------------------- */
+/*     MOBILE VIEW FIX    */
+/* ---------------------- */
+
+@media (max-width: 600px){
+
+    body{
+        padding-top: 100px;
+    }
+
+    .main-header{
+        font-size: 1.2rem;
+        padding: 14px 5px;
+    }
+
+    .tbl thead tr th{
+        font-size: 0.8rem;
+        padding: 0.5rem;
+    }
+
+    .tbl tbody tr td{
+        font-size: 0.8rem;
+        padding: 0.4rem;
+    }
+
+    .container{
+        box-shadow: none;
+        padding: 5px;
+    }
+}
